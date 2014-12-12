@@ -1,3 +1,14 @@
+2014.12.12, v1.0.2
+
+fix:
+- (util) render: do not remove empty blocks "{{", "}}"
+- (rendy) indexOf -> ~indexOf
+
+feature:
+- (package) v1.0.1
+- (rendy) add expr
+
+
 2014.12.12, v1.0.1
 
 fix:
