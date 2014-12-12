@@ -15,7 +15,7 @@ Browser version:
 ```html
 <script src="rendy.js"></script>
 <script>
-    Tmpl    = 'hello {{ who }}';
+    Tmpl    = 'hello {{ where }}';
     result  = rendy(Tmpl, {
         where: 'in browser'
     });
