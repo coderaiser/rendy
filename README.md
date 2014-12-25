@@ -15,12 +15,12 @@ Browser version:
 ```html
 <script src="rendy.js"></script>
 <script>
-    Tmpl    = 'hello {{ where }}';
-    result  = rendy(Tmpl, {
-        where: 'in browser'
-    });
-    // returns
-    'hello in browser'
+    var Tmpl    = 'hello {{ where }}';
+        result  = rendy(Tmpl, {
+            where: 'in browser'
+        });
+        // returns
+        'hello in browser'
 </script>
 ```
 
