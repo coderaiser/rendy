@@ -6,7 +6,6 @@ Simple template engine
 
 `npm i rendy --save`
 
-
 ## How to use?
 Rendy could be used in browser or node.
 
@@ -41,7 +40,7 @@ var rendy   = require('rendy'),
 
 MIT
 
-[NPM_INFO_IMG]:             https://nodei.co/npm/rendy.png?downloads=true&&stars&&downloadRank "npm install rendy"
+[NPM_INFO_IMG]:             https://nodei.co/npm/rendy.png?downloads&&stars&&downloadRank "npm install rendy"
 [NPMIMGURL]:                https://img.shields.io/npm/v/rendy.svg?style=flat
 [BuildStatusIMGURL]:        https://img.shields.io/travis/coderaiser/rendy/master.svg?style=flat
 [DependencyStatusIMGURL]:   https://img.shields.io/gemnasium/coderaiser/rendy.svg?style=flat
