@@ -1,6 +1,6 @@
 {
   "name": "rendy",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "simple template engine",
   "main": "lib/rendy.js",
   "scripts": {
