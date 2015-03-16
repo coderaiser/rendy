@@ -15,6 +15,12 @@
                 
                 should(result).eql('hello world');
             });
+            
+            it('should use greedy regexp', function() {
+                var result = rendy('hello {{ hello }} and {{ word }}', {});
+                
+                should(result).eql('hello  and ');
+            });
         });
         
         describe('when not all parameters present', function() {
