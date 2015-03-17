@@ -4,8 +4,7 @@
   "description": "simple template engine",
   "main": "lib/rendy.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "gulp": "gulp"
+    "test": "gulp test"
   },
   "repository": {
     "type": "git",
