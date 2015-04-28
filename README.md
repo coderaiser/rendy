@@ -1,5 +1,5 @@
 # Rendy [![License][LicenseIMGURL]][LicenseURL] [![NPM version][NPMIMGURL]][NPMURL] [![Dependency Status][DependencyStatusIMGURL]][DependencyStatusURL] [![Build Status][BuildStatusIMGURL]][BuildStatusURL]
-Simple template engine
+Simple template engine compitable with [handlebars](http://handlebarsjs.com "Handlebars") and [mustache](https://mustache.github.io "Mustache").
 
 ## Install
 ![NPM_INFO][NPM_INFO_IMG]
