@@ -1,7 +1,7 @@
 {
   "name": "rendy",
   "version": "1.0.6",
-  "description": "simple template engine",
+  "description": "simple template engine compatible with handlebars and mustache",
   "main": "lib/rendy.js",
   "scripts": {
     "test": "gulp test"
