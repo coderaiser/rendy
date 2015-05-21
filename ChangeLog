@@ -1,3 +1,15 @@
+2015.05.21, v1.1.0
+
+feature:
+- (rendy) 5 times spead up
+- (package) should v6.0.1
+- (travis) add iojs, rm global gulp
+- (package) scripts: test
+- (test) greedy
+- (package) should v5.2
+- (package) scripts: gulp
+
+
 2015.03.13, v1.0.6
 
 fix:
