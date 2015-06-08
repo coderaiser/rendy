@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/coderaiser/rendy",
   "devDependencies": {
-    "gulp": "~3.8.10",
+    "gulp": "^3.9.0",
     "gulp-mocha": "^2.1.0",
     "should": "~6.0.1"
   }
