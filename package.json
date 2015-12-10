@@ -4,7 +4,7 @@
   "description": "simplest template engine",
   "main": "lib/rendy.js",
   "scripts": {
-    "test": "gulp test"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -21,8 +21,7 @@
   },
   "homepage": "https://github.com/coderaiser/rendy",
   "devDependencies": {
-    "gulp": "^3.9.0",
-    "gulp-mocha": "^2.1.0",
+    "mocha": "^2.3.4",
     "should": "^8.0.0"
   }
 }
