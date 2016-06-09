@@ -3,7 +3,8 @@
     
     /*global describe, it */
     
-    var should  = require('should'),
+    var fs      = require('fs'),
+        should  = require('should'),
         rendy   = require('..');
     
     describe('rendy', function() {
@@ -34,6 +35,28 @@
                  should(function() {
                     rendy('hello {{ word }}');
                 }).throw();
+            });
+        });
+        
+        describe('used as global', function() {
+            var fn;
+            var context;
+            
+            beforeEach(function() {
+                context = {};
+            });
+            it('should store rendy as global variable', function() {
+                var code = fs.readFileSync(__dirname + '/../lib/rendy.js');
+                var args = [
+                    'exports',
+                    'require',
+                    'module'
+                ];
+                
+                fn = Function(args, code);
+                fn.call(context);
+                
+                context.rendy.should.be.a.Function;
             });
         });
     });

@@ -4,7 +4,9 @@
   "description": "simplest template engine",
   "main": "lib/rendy.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "coverage": "nyc npm test",
+    "report": "nyc report --reporter=text-lcov | coveralls"
   },
   "repository": {
     "type": "git",
@@ -21,7 +23,9 @@
   },
   "homepage": "https://github.com/coderaiser/rendy",
   "devDependencies": {
+    "coveralls": "^2.11.6",
     "mocha": "^2.3.4",
-    "should": "^8.0.0"
+    "nyc": "^5.0.1",
+    "should": "^9.0.1"
   }
 }
