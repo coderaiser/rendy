@@ -24,7 +24,7 @@
   "homepage": "https://github.com/coderaiser/rendy",
   "devDependencies": {
     "coveralls": "^2.11.6",
-    "mocha": "^2.3.4",
+    "mocha": "^3.0.0",
     "nyc": "^7.0.0",
     "should": "^10.0.0"
   }
