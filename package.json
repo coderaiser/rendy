@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/coderaiser/rendy",
   "devDependencies": {
-    "coveralls": "^2.11.6",
+    "coveralls": "^3.0.0",
     "eslint": "^4.0.0",
     "mocha": "^3.0.0",
     "nyc": "^11.0.2",
