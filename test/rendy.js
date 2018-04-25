@@ -1,64 +1,75 @@
-(function() {
-    'use strict';
-    
-    /*global describe, it */
-    
-    var fs      = require('fs'),
-        should  = require('should'),
-        rendy   = require('..');
-    
-    describe('rendy', function() {
-        describe('render template with data', function() {
-            it('should render template with given data', function() {
-                var result = rendy('hello {{ word }}', {
-                    word: 'world'
-                });
-                
-                should(result).eql('hello world');
-            });
-            
-            it('should use greedy regexp', function() {
-                var result = rendy('hello {{ hello }} and {{ word }}', {});
-                
-                should(result).eql('hello  and ');
-            });
-        });
-        
-        describe('when not all parameters present', function() {
-            it('no template, no data', function() {
-                 should(function() {
-                    rendy();
-                }).throw();
-            });
-            
-            it('template, no data', function() {
-                 should(function() {
-                    rendy('hello {{ word }}');
-                }).throw();
-            });
-        });
-        
-        describe('used as global', function() {
-            var fn;
-            var context;
-            
-            beforeEach(function() {
-                context = {};
-            });
-            it('should store rendy as global variable', function() {
-                var code = fs.readFileSync(__dirname + '/../lib/rendy.js');
-                var args = [
-                    'exports',
-                    'require',
-                    'module'
-                ];
-                
-                fn = Function(args, code);
-                fn.call(context);
-                
-                context.rendy.should.be.a.Function;
-            });
-        });
+'use strict';
+
+/*global describe, it */
+
+const fs = require('fs');
+const should = require('should');
+const rendy = require('..');
+
+it('rendy: ddos', () => {
+    const title = '$$$\'&quot;';
+    const name = 'hello';
+    const attribute = 'hidden ';
+    const tmpl = '"<a href="/" title="{{ title }}" {{ attribute }}draggable="true">{{ name }}</a>';
+    const expected = `"<a href="/" title="${title}" hidden draggable="true">hello</a>`;
+    const result = rendy(tmpl, {
+        name,
+        title,
+        attribute,
     });
     
-})();
+    should(result).eql(expected);
+});
+
+describe('render template with data', () => {
+    it('should render template with given data', () => {
+        const result = rendy('hello {{ word }}', {
+            word: 'world'
+        });
+        
+        should(result).eql('hello world');
+    });
+    
+    it('should use greedy regexp', () => {
+        const result = rendy('hello {{ hello }} and {{ word }}', {});
+        
+        should(result).eql('hello  and ');
+    });
+});
+
+describe('when not all parameters present', () => {
+    it('no template, no data', () => {
+         should(() => {
+            rendy();
+        }).throw();
+    });
+    
+    it('template, no data', () => {
+         should(() => {
+            rendy('hello {{ word }}');
+        }).throw();
+    });
+});
+
+describe('used as global', () => {
+    let context;
+    
+    beforeEach(() => {
+        context = {};
+    });
+    
+    it('should store rendy as global constiable', () => {
+        const code = fs.readFileSync(__dirname + '/../lib/rendy.js');
+        const args = [
+            'exports',
+            'require',
+            'module'
+        ];
+        
+        const fn = Function(args, code);
+        fn.call(context);
+        
+        context.rendy.should.be.a.Function;
+    });
+});
+
