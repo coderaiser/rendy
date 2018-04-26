@@ -1,4 +1,4 @@
-# Rendy [![License][LicenseIMGURL]][LicenseURL] [![NPM version][NPMIMGURL]][NPMURL] [![Dependency Status][DependencyStatusIMGURL]][DependencyStatusURL] [![Build Status][BuildStatusIMGURL]][BuildStatusURL]
+# Rendy [![License][LicenseIMGURL]][LicenseURL] [![NPM version][NPMIMGURL]][NPMURL] [![Dependency Status][DependencyStatusIMGURL]][DependencyStatusURL] [![Build Status][BuildStatusIMGURL]][BuildStatusURL] [![Coverage][CoverageIMGURL]][CoverageURL]
 
 Simple template engine compatible with [handlebars](http://handlebarsjs.com "Handlebars") and [mustache](https://mustache.github.io "Mustache").
 
@@ -43,4 +43,7 @@ MIT
 [BuildStatusURL]:           https://travis-ci.org/coderaiser/rendy  "Build Status"
 [DependencyStatusURL]:      https://gemnasium.com/coderaiser/rendy "Dependency Status"
 [LicenseURL]:               https://tldrlegal.com/license/mit-license "MIT License"
+
+[CoverageURL]:              https://coveralls.io/github/coderaiser/rendy?branch=master
+[CoverageIMGURL]:           https://coveralls.io/repos/coderaiser/rendy/badge.svg?branch=master&service=github
 
