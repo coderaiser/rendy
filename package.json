@@ -4,9 +4,16 @@
   "description": "simplest template engine",
   "main": "lib/rendy.js",
   "scripts": {
-    "test": "mocha",
+    "lint": "eslint lib test",
+    "test": "tape 'test/**/*.js'",
     "coverage": "nyc npm test",
-    "report": "nyc report --reporter=text-lcov | coveralls"
+    "report": "nyc report --reporter=text-lcov | coveralls",
+    "build": "redrun clean init 6to5 legacy:*",
+    "wisdom": "npm run build",
+    "init": "mkdirp legacy",
+    "clean": "rimraf legacy",
+    "6to5": "babel lib -d legacy/lib",
+    "legacy:index": "echo \"module.exports = require('./lib/rendy');\" > legacy/index.js"
   },
   "repository": {
     "type": "git",
@@ -23,10 +30,12 @@
   },
   "homepage": "https://github.com/coderaiser/rendy",
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
     "coveralls": "^3.0.0",
     "eslint": "^4.0.0",
-    "mocha": "^5.0.0",
+    "eslint-plugin-node": "^6.0.1",
     "nyc": "^11.0.2",
-    "should": "^13.0.1"
+    "tape": "^4.9.0"
   }
 }

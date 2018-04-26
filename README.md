@@ -1,39 +1,33 @@
 # Rendy [![License][LicenseIMGURL]][LicenseURL] [![NPM version][NPMIMGURL]][NPMURL] [![Dependency Status][DependencyStatusIMGURL]][DependencyStatusURL] [![Build Status][BuildStatusIMGURL]][BuildStatusURL]
+
 Simple template engine compatible with [handlebars](http://handlebarsjs.com "Handlebars") and [mustache](https://mustache.github.io "Mustache").
 
 ## Install
+
 ![NPM_INFO][NPM_INFO_IMG]
 
 `npm i rendy --save`
 
 ## How to use?
-Rendy could be used in browser or node.
-
-Browser version:
-
-```html
-<script src="rendy.js"></script>
-<script>
-    var Tmpl    = 'hello {{ where }}';
-        result  = rendy(Tmpl, {
-            where: 'in browser'
-        });
-        // returns
-        'hello in browser'
-</script>
-```
-
-Node version:
 
 ```js
-var rendy   = require('rendy'),
-    Tmpl    = 'hello {{ who }}';
-    result  = rendy(Tmpl, {
-        who: 'world'
-    });
-    // returns
-    'hello world'
+const rendy = require('rendy');
+const tmpl = 'hello {{ who }}';
+const who = 'world';
 
+rendy(tmpl, {
+    who
+});
+// returns
+'hello world'
+```
+
+## Environments
+
+In old `node.js` environments that not fully supports `es2015`, `rendy` can be used with:
+
+```js
+var rendy = require('rendy/legacy');
 ```
 
 ## License
