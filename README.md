@@ -6,7 +6,7 @@ Simple template engine compatible with [handlebars](http://handlebarsjs.com "Han
 
 ![NPM_INFO][NPM_INFO_IMG]
 
-`npm i rendy
+`npm i rendy`
 
 ## How to use?
 
