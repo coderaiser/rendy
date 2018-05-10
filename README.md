@@ -37,11 +37,11 @@ MIT
 [NPM_INFO_IMG]:             https://nodei.co/npm/rendy.png?downloads&&stars&&downloadRank "npm install rendy"
 [NPMIMGURL]:                https://img.shields.io/npm/v/rendy.svg?style=flat
 [BuildStatusIMGURL]:        https://img.shields.io/travis/coderaiser/rendy/master.svg?style=flat
-[DependencyStatusIMGURL]:   https://img.shields.io/gemnasium/coderaiser/rendy.svg?style=flat
+[DependencyStatusIMGURL]:   https://img.shields.io/david/coderaiser/rendy.svg?style=flat
 [LicenseIMGURL]:            https://img.shields.io/badge/license-MIT-317BF9.svg?style=flat
 [NPMURL]:                   https://npmjs.org/package/rendy "npm"
 [BuildStatusURL]:           https://travis-ci.org/coderaiser/rendy  "Build Status"
-[DependencyStatusURL]:      https://gemnasium.com/coderaiser/rendy "Dependency Status"
+[DependencyStatusURL]:      https://david-dm.org/coderaiser/rendy "Dependency Status"
 [LicenseURL]:               https://tldrlegal.com/license/mit-license "MIT License"
 
 [CoverageURL]:              https://coveralls.io/github/coderaiser/rendy?branch=master
