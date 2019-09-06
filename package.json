@@ -37,7 +37,7 @@
     "eslint-plugin-node": "^10.0.0",
     "eslint-plugin-putout": "^2.0.0",
     "madrun": "^3.0.1",
-    "nyc": "^13.0.1",
+    "nyc": "^14.1.1",
     "putout": "^5.11.1",
     "tape": "^4.9.0"
   },
