@@ -22,14 +22,6 @@ rendy(tmpl, {
 'hello world'
 ```
 
-## Environments
-
-In old `node.js` environments that not fully supports `es2015`, `rendy` can be used with:
-
-```js
-var rendy = require('rendy/legacy');
-```
-
 ## License
 
 MIT
