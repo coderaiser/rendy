@@ -4,16 +4,11 @@
   "description": "simplest template engine",
   "main": "lib/rendy.js",
   "scripts": {
-    "lint": "eslint lib test",
-    "test": "tape 'test/**/*.js'",
-    "coverage": "nyc npm test",
-    "report": "nyc report --reporter=text-lcov | coveralls",
-    "build": "redrun clean init 6to5 legacy:*",
-    "wisdom": "npm run build",
-    "init": "mkdirp legacy",
-    "clean": "rimraf legacy",
-    "6to5": "babel lib -d legacy/lib",
-    "legacy:index": "echo \"module.exports = require('./lib/rendy');\" > legacy/index.js"
+    "lint": "madrun lint",
+    "fix:lint": "madrun fix:lint",
+    "test": "madrun test",
+    "coverage": "madrun coverage",
+    "report": "madrun report"
   },
   "repository": {
     "type": "git",
@@ -39,7 +34,7 @@
     "madrun": "^3.0.1",
     "nyc": "^14.1.1",
     "putout": "^5.11.1",
-    "tape": "^4.9.0"
+    "supertape": "^1.2.3"
   },
   "publishConfig": {
     "access": "public"

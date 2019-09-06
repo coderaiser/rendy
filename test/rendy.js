@@ -1,6 +1,6 @@
 'use strict';
 
-const test = require('tape');
+const test = require('supertape');
 const rendy = require('..');
 
 test('rendy: ddos', (t) => {
@@ -21,7 +21,7 @@ test('rendy: ddos', (t) => {
 
 test('rendy: render template with given data', (t) => {
     const result = rendy('hello {{ word }}', {
-        word: 'world'
+        word: 'world',
     });
     
     t.equal(result, 'hello world', 'should equal');
