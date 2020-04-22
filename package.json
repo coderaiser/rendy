@@ -2,7 +2,9 @@
   "name": "rendy",
   "version": "3.0.1",
   "description": "simplest template engine",
-  "main": "lib/rendy.js",
+  "main": "./lib/rendy.js",
+  "exports": "./lib/rendy.js",
+  "type": "commonjs",
   "scripts": {
     "lint": "madrun lint",
     "fix:lint": "madrun fix:lint",
