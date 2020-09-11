@@ -38,6 +38,9 @@
     "putout": "^9.14.1",
     "supertape": "^2.0.1"
   },
+  "engines": {
+    "node": ">=4"
+  },
   "publishConfig": {
     "access": "public"
   }
