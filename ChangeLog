@@ -1,3 +1,17 @@
+2020.09.11, v3.1.0
+
+feature:
+- (rendy) indexOf -> includes
+- (package) madrun v7.0.2
+- (package) supertape v2.0.1
+- (package) putout v9.14.1
+- (package) eslint-plugin-putout v5.1.0
+- (package) eslint v7.8.1
+- (package) eslint-plugin-node v11.1.0
+- (package) nyc v15.0.1
+- (package) add exports, type
+
+
 2019.09.06, v3.0.1
 
 fix:
