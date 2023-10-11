@@ -1,5 +1,15 @@
 # Rendy [![License][LicenseIMGURL]][LicenseURL] [![NPM version][NPMIMGURL]][NPMURL] [![Build Status][BuildStatusIMGURL]][BuildStatusURL] [![Coverage][CoverageIMGURL]][CoverageURL]
 
+[NPM_INFO_IMG]: https://nodei.co/npm/rendy.png?downloads&&stars&&downloadRank "npm install rendy"
+[NPMIMGURL]: https://img.shields.io/npm/v/rendy.svg?style=flat
+[BuildStatusURL]: https://github.com/coderaiser/rendy/actions/workflows/nodejs.yml "Build Status"
+[BuildStatusIMGURL]: https://github.com/coderaiser/rendy/actions/workflows/nodejs.yml/badge.svg
+[LicenseIMGURL]: https://img.shields.io/badge/license-MIT-317BF9.svg?style=flat
+[NPMURL]: https://npmjs.org/package/rendy "npm"
+[LicenseURL]: https://tldrlegal.com/license/mit-license "MIT License"
+[CoverageURL]: https://coveralls.io/github/coderaiser/rendy?branch=master
+[CoverageIMGURL]: https://coveralls.io/repos/coderaiser/rendy/badge.svg?branch=master&service=github
+
 Simple template engine compatible with [handlebars](http://handlebarsjs.com "Handlebars") and [mustache](https://mustache.github.io "Mustache").
 
 ## Install
@@ -63,12 +73,3 @@ rendy('hello {{ names | implode }}', values, modifiers);
 
 MIT
 
-[NPM_INFO_IMG]: https://nodei.co/npm/rendy.png?downloads&&stars&&downloadRank "npm install rendy"
-[NPMIMGURL]: https://img.shields.io/npm/v/rendy.svg?style=flat
-[BuildStatusIMGURL]: https://img.shields.io/travis/coderaiser/rendy/master.svg?style=flat
-[LicenseIMGURL]: https://img.shields.io/badge/license-MIT-317BF9.svg?style=flat
-[NPMURL]: https://npmjs.org/package/rendy "npm"
-[BuildStatusURL]: https://travis-ci.org/coderaiser/rendy "Build Status"
-[LicenseURL]: https://tldrlegal.com/license/mit-license "MIT License"
-[CoverageURL]: https://coveralls.io/github/coderaiser/rendy?branch=master
-[CoverageIMGURL]: https://coveralls.io/repos/coderaiser/rendy/badge.svg?branch=master&service=github
