@@ -3,6 +3,7 @@
     "all": true,
     "exclude": [
         "**/lib/**/{fixture,*.spec.{js,mjs}}",
+        "**/test",
         ".*"
     ],
     "branches": 100,

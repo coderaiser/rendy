@@ -59,7 +59,7 @@ test('rendy: modifiers', (t) => {
     const modifiers = {
         implode: (a) => {
             return a.join(', ');
-        }
+        },
     };
     
     const result = rendy('hello {{ names | implode }}', values, modifiers);
@@ -77,7 +77,7 @@ test('rendy: modifiers: not found', (t) => {
     const modifiers = {
         implode: (a) => {
             return a.join(', ');
-        }
+        },
     };
     
     const result = rendy('hello {{ names | abc}}', values, modifiers);
@@ -95,7 +95,7 @@ test('rendy: modifiers: not used', (t) => {
     const modifiers = {
         implode: (a) => {
             return a.join(', ');
-        }
+        },
     };
     
     const result = rendy('hello {{ names }}', values, modifiers);

@@ -36,35 +36,34 @@ const rendy = require('rendy');
 
 #### rendy(template: string, value: Values, modifiers?: Modifiers)
 
-`Values` is: 
+`Values` is:
 
 ```ts
 type Values = {
     [key: string]: unknown;
 };
-
-type Modifiers= {
-    [key: string]: (value: unknown) () => string;
+type Modifiers = {
+    [key: string]: (value: unknown) => string;
 };
 ```
 
 ```js
 rendy('hello {{ value }}', {
-    value: 'world' ,
+    value: 'world',
 });
 
 // returns
 'hello world';
 
 const values = {
-    names: ['a', 'b', 'c'] ,
+    names: ['a', 'b', 'c'],
 };
 
 const modifiers = {
-    implode: (a) => a.join(', ');
+    implode: (a) => a.join(', '),
 };
-rendy('hello {{ names | implode }}', values, modifiers);
 
+rendy('hello {{ names | implode }}', values, modifiers);
 // returns
 'hello a, b, c';
 ```
@@ -72,4 +71,3 @@ rendy('hello {{ names | implode }}', values, modifiers);
 ## License
 
 MIT
-
