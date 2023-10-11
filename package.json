@@ -29,7 +29,7 @@
   "devDependencies": {
     "c8": "^8.0.1",
     "coveralls": "^3.0.0",
-    "eslint": "^7.8.1",
+    "eslint": "^8.51.0",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-putout": "^5.1.0",
     "madrun": "^9.4.0",
