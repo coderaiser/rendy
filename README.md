@@ -24,13 +24,17 @@ const rendy = require('rendy');
 
 ### API
 
-#### rendy(template: string, value: Values})
+#### rendy(template: string, value: Values, modifiers?: Modifiers)
 
 `Values` is: 
 
 ```ts
 type Values = {
-    [key: string]: string;
+    [key: string]: unknown;
+};
+
+type Modifiers= {
+    [key: string]: (value: unknown): string;
 };
 ```
 
@@ -41,6 +45,18 @@ rendy('hello {{ value }}, {
 
 // returns
 'hello world';
+
+const values = {
+    names: ['a', 'b', 'c'] ,
+};
+
+const modifiers = {
+    implode: (a) => a.join(', ');
+};
+rendy('hello {{ names | implode }}, values, modifiers);
+
+// returns
+'hello a, b, c';
 ```
 
 ## License

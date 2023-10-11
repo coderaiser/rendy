@@ -1,6 +1,10 @@
 type Values = {
-    [index: string]: string;
+    [index: string]: unknown;
 };
 
-declare function rendy(template: string, values: Values): string;
+type Modifiers = {
+    [index: string]: (value: unknown) => string;
+}
+
+declare function rendy(template: string, values: Values, modifiers?: Modifiers): string;
 export default rendy;

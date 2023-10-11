@@ -21,7 +21,7 @@ test('rendy: ddos', (t) => {
     t.end();
 });
 
-test('rendy: render template with given data', (t) => {
+test('rendy: render template with given values', (t) => {
     const result = rendy('hello {{ word }}', {
         word: 'world',
     });
@@ -37,16 +37,70 @@ test('rendy: greedy regexp', (t) => {
     t.end();
 });
 
-test('rendy: no template, no data', (t) => {
+test('rendy: no template, no values', (t) => {
     const [error] = tryCatch(rendy);
     
     t.equal(error.message, 'template should be a string!', 'should throw when no template');
     t.end();
 });
 
-test('rendy: template, no data', (t) => {
+test('rendy: template, no values', (t) => {
     const [error] = tryCatch(rendy, 'hello {{ word }}');
     
-    t.equal(error.message, 'data should be an object!', 'should throw when no data');
+    t.equal(error.message, 'values should be an object!', 'should throw when no data');
+    t.end();
+});
+
+test('rendy: modifiers', (t) => {
+    const values = {
+        names: ['a', 'b', 'c'],
+    };
+    
+    const modifiers = {
+        implode: (a) => {
+            return a.join(', ');
+        }
+    };
+    
+    const result = rendy('hello {{ names | implode }}', values, modifiers);
+    const expected = 'hello a, b, c';
+    
+    t.equal(result, expected);
+    t.end();
+});
+
+test('rendy: modifiers: not found', (t) => {
+    const values = {
+        names: ['a', 'b', 'c'],
+    };
+    
+    const modifiers = {
+        implode: (a) => {
+            return a.join(', ');
+        }
+    };
+    
+    const result = rendy('hello {{ names | abc}}', values, modifiers);
+    const expected = 'hello a,b,c';
+    
+    t.equal(result, expected);
+    t.end();
+});
+
+test('rendy: modifiers: not used', (t) => {
+    const values = {
+        names: ['a', 'b', 'c'],
+    };
+    
+    const modifiers = {
+        implode: (a) => {
+            return a.join(', ');
+        }
+    };
+    
+    const result = rendy('hello {{ names }}', values, modifiers);
+    const expected = 'hello a,b,c';
+    
+    t.equal(result, expected);
     t.end();
 });
