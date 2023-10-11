@@ -10,13 +10,33 @@ Simple template engine compatible with [handlebars](http://handlebarsjs.com "Han
 
 ## How to use?
 
+In **ESM**
+
+```
+import rendy from 'rendy';
+```
+
+in **CommonJS**:
+
 ```js
 const rendy = require('rendy');
-const tmpl = 'hello {{ who }}';
-const who = 'world';
+```
 
-rendy(tmpl, {
-    who,
+### API
+
+#### rendy(template: string, value: Values})
+
+`Values` is: 
+
+```ts
+type Values = {
+    [key: string]: string;
+};
+```
+
+```js
+rendy('hello {{ value }}, {
+    value: 'world' ,
 });
 
 // returns
