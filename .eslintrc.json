@@ -1,13 +1,10 @@
 {
-    "rules": {
-        "node/no-unsupported-features/es-syntax": "off"
-    },
     "extends": [
-        "plugin:putout/recommended",
-        "plugin:node/recommended"
+        "plugin:n/recommended",
+        "plugin:putout/recommended"
     ],
     "plugins": [
         "putout",
-        "node"
+        "n"
     ]
 }

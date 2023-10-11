@@ -39,12 +39,14 @@ test('rendy: greedy regexp', (t) => {
 
 test('rendy: no template, no data', (t) => {
     const [error] = tryCatch(rendy);
+    
     t.equal(error.message, 'template should be a string!', 'should throw when no template');
     t.end();
 });
 
-test('template, no data', (t) => {
+test('rendy: template, no data', (t) => {
     const [error] = tryCatch(rendy, 'hello {{ word }}');
+    
     t.equal(error.message, 'data should be an object!', 'should throw when no data');
     t.end();
 });
