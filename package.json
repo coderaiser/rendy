@@ -9,6 +9,7 @@
     "lint": "madrun lint",
     "fix:lint": "madrun fix:lint",
     "test": "madrun test",
+    "test:dts": "madrun test:dts",
     "coverage": "madrun coverage",
     "report": "madrun report"
   },
@@ -35,7 +36,8 @@
     "eslint-plugin-putout": "^20.0.0",
     "madrun": "^9.4.0",
     "putout": "^32.2.1",
-    "supertape": "^8.6.0"
+    "supertape": "^8.6.0",
+    "try-catch": "^3.0.1"
   },
   "engines": {
     "node": ">=16"
