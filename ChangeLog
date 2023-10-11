@@ -1,3 +1,17 @@
+2023.10.11, v4.0.0
+
+feature:
+- dcc4ee5 package: eslint-plugin-n v16.2.0
+- 94b4276 rendy: add ts support
+- 3d9b26e package: check-dts v0.7.2
+- 1259705 package: eslint-plugin-putout v20.0.0
+- ec29259 package: eslint v8.51.0
+- d24cb83 package: supertape v8.6.0
+- 1cd12c2 package: madrun v9.4.0
+- f7e53c0 package: putout v32.2.1
+- a4ab7e2 package: drop support of node < 16
+- f392f37 (package) putout v10.0.3
+
 2020.09.11, v3.1.1
 
 fix:
