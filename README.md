@@ -22,7 +22,7 @@ Simple template engine compatible with [handlebars](http://handlebarsjs.com "Han
 
 In **ESM**
 
-```
+```js
 import rendy from 'rendy';
 ```
 
