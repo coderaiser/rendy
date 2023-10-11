@@ -31,7 +31,7 @@
     "coveralls": "^3.0.0",
     "eslint": "^8.51.0",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-putout": "^5.1.0",
+    "eslint-plugin-putout": "^20.0.0",
     "madrun": "^9.4.0",
     "putout": "^32.2.1",
     "supertape": "^8.6.0"
