@@ -44,12 +44,12 @@ type Values = {
 };
 
 type Modifiers= {
-    [key: string]: (value: unknown): string;
+    [key: string]: (value: unknown) () => string;
 };
 ```
 
 ```js
-rendy('hello {{ value }}, {
+rendy('hello {{ value }}', {
     value: 'world' ,
 });
 
