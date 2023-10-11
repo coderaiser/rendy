@@ -53,7 +53,7 @@ const values = {
 const modifiers = {
     implode: (a) => a.join(', ');
 };
-rendy('hello {{ names | implode }}, values, modifiers);
+rendy('hello {{ names | implode }}', values, modifiers);
 
 // returns
 'hello a, b, c';
