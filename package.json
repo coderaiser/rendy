@@ -29,17 +29,17 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.1",
+    "c8": "^8.0.1",
     "coveralls": "^3.0.0",
     "eslint": "^7.8.1",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-putout": "^5.1.0",
     "madrun": "^7.0.2",
-    "nyc": "^15.0.1",
     "putout": "^10.0.3",
     "supertape": "^2.0.1"
   },
   "engines": {
-    "node": ">=4"
+    "node": ">=16"
   },
   "publishConfig": {
     "access": "public"
