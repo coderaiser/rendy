@@ -8,5 +8,5 @@ module.exports = {
     'test': () => `tape 'test/**/*.js'`,
     'test:dts': () => 'check-dts',
     'coverage': () => 'c8 npm test',
-    'report': () => 'c8 report --reporter=text-lcov | coveralls',
+    'report': () => 'c8 report --reporter=text-lcov',
 };
