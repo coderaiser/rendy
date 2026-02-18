@@ -1,7 +1,7 @@
 'use strict';
 
-const tryCatch = require('try-catch');
-const test = require('supertape');
+const {tryCatch} = require('try-catch');
+const {test} = require('supertape');
 const rendy = require('..');
 
 test('rendy: ddos', (t) => {

@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/coderaiser/rendy.git"
+    "url": "git+https://github.com/coderaiser/rendy.git"
   },
   "keywords": [
     "template",
@@ -39,7 +39,7 @@
     "try-catch": "^4.0.9"
   },
   "engines": {
-    "node": ">=16"
+    "node": ">=22"
   },
   "publishConfig": {
     "access": "public"
