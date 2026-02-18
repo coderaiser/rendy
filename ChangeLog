@@ -1,3 +1,18 @@
+2026.02.18, v5.0.0
+
+feature:
+- 1d1f843 rendy: migrate to ESM
+- 509b565 rendy: drop support of node < 22
+- 9aead1a rendy: try-catch v4.0.9
+- 383e69b rendy: supertape v12.5.0
+- 3245ab3 rendy: putout v42.0.5
+- d35f8e1 rendy: madrun v13.0.0
+- 6863280 rendy: eslint-plugin-putout v31.0.0
+- db11c70 rendy: eslint-plugin-n v17.24.0
+- a4ad496 rendy: eslint v10.0.0
+- c84f4b9 rendy: check-dts v0.9.0
+- 2548afe rendy: c8 v10.1.3
+
 2023.10.12, v4.1.3
 
 feature:
