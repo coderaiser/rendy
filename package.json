@@ -36,7 +36,7 @@
     "madrun": "^13.0.0",
     "putout": "^42.0.5",
     "supertape": "^12.5.0",
-    "try-catch": "^3.0.1"
+    "try-catch": "^4.0.9"
   },
   "engines": {
     "node": ">=16"
