@@ -20,16 +20,8 @@ Simple template engine compatible with [handlebars](http://handlebarsjs.com "Han
 
 ## How to use?
 
-In **ESM**
-
 ```js
-import rendy from 'rendy';
-```
-
-in **CommonJS**:
-
-```js
-const rendy = require('rendy');
+import {rendy} from 'rendy';
 ```
 
 ### API

@@ -1,8 +1,6 @@
-'use strict';
-
-const {tryCatch} = require('try-catch');
-const {test} = require('supertape');
-const rendy = require('..');
+import {tryCatch} from 'try-catch';
+import {test} from 'supertape';
+import {rendy} from '../lib/rendy.js';
 
 test('rendy: ddos', (t) => {
     const ttestle = `$$$'&quot;`;
