@@ -1,3 +1,9 @@
+2026.03.22, v5.0.1
+
+feature:
+- e5d1fa8 rendy: superc8 v12.3.1
+- d23d155 rendy: when modifiers not passed - set it to null, so it can be curried correctly
+
 2026.02.18, v5.0.0
 
 feature:
