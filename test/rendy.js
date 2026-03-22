@@ -1,5 +1,6 @@
 import {tryCatch} from 'try-catch';
 import {test} from 'supertape';
+import currify from 'currify';
 import {rendy} from '../lib/rendy.js';
 
 test('rendy: ddos', (t) => {
@@ -97,6 +98,20 @@ test('rendy: modifiers: not used', (t) => {
     };
     
     const result = rendy('hello {{ names }}', values, modifiers);
+    const expected = 'hello a,b,c';
+    
+    t.equal(result, expected);
+    t.end();
+});
+
+test('rendy: modifiers: not used: curry', (t) => {
+    const values = {
+        names: ['a', 'b', 'c'],
+    };
+    
+    const fn = currify(rendy);
+    
+    const result = fn('hello {{ names }}', values);
     const expected = 'hello a,b,c';
     
     t.equal(result, expected);
