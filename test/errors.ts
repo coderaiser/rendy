@@ -1,4 +1,4 @@
-import rendy from '..';
+import {rendy} from '..';
 
 // THROWS Expected 2-3 arguments, but got 0
 rendy();
