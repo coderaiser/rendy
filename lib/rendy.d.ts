@@ -6,3 +6,4 @@ type Modifiers = {
 };
 
 export declare function rendy(template: string, values: Values, modifiers?: Modifiers): string;
+
