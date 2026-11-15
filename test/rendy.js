@@ -183,3 +183,14 @@ test('rendy: modifiers: modifier returns nothing', (t) => {
     t.equal(result, 'hello ');
     t.end();
 });
+
+test('rendy: modifiers: modifier returns 0', (t) => {
+    const result = rendy('n={{ list | count }}', {
+        list: [],
+    }, {
+        count: (a) => a.length,
+    });
+    
+    t.equal(result, 'n=0');
+    t.end();
+});
