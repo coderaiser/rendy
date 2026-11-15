@@ -36,7 +36,7 @@
     "madrun": "^13.0.0",
     "putout": "^42.0.5",
     "superc8": "^12.3.1",
-    "supertape": "^12.5.0",
+    "supertape": "^13.6.2",
     "try-catch": "^4.0.9"
   },
   "engines": {
