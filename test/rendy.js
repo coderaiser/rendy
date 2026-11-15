@@ -3,6 +3,8 @@ import {test} from 'supertape';
 import currify from 'currify';
 import {rendy} from '../lib/rendy.js';
 
+const noop = () => {};
+
 test('rendy: ddos', (t) => {
     const ttestle = `$$$'&quot;`;
     const name = 'hello';
@@ -152,5 +154,32 @@ test('rendy: 0 without modifiers', (t) => {
     });
     
     t.equal(result, 'n=0');
+    t.end();
+});
+
+test('rendy: placeholder without spaces is removed', (t) => {
+    const result = rendy('hello {{word}}!', {
+        word: 'world',
+    });
+    
+    t.equal(result, 'hello !');
+    t.end();
+});
+
+test('rendy: modifiers: value not found', (t) => {
+    const result = rendy('hello {{ word }}', {}, {});
+    
+    t.equal(result, 'hello ');
+    t.end();
+});
+
+test('rendy: modifiers: modifier returns nothing', (t) => {
+    const result = rendy('hello {{ word | empty }}', {
+        word: 'world',
+    }, {
+        empty: noop,
+    });
+    
+    t.equal(result, 'hello ');
     t.end();
 });
