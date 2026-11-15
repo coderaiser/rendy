@@ -14,7 +14,7 @@ Simple template engine compatible with [handlebars](http://handlebarsjs.com "Han
 
 ## Install
 
-![NPM\_INFO][NPM_INFO_IMG]
+![NPM_INFO][NPM_INFO_IMG]
 
 `npm i rendy`
 
@@ -43,7 +43,6 @@ type Modifiers = {
 rendy('hello {{ value }}', {
     value: 'world',
 });
-
 // returns
 'hello world';
 
