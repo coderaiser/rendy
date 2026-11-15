@@ -1,6 +1,6 @@
 *.log
 *.config.*
-*.loc
+*.lock
 
 .*
 

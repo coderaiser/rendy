@@ -31,7 +31,6 @@
     "check-dts": "^2.0.1",
     "currify": "^4.0.0",
     "eslint": "^10.0.0",
-    "eslint-plugin-n": "^18.5.0",
     "eslint-plugin-putout": "^31.0.0",
     "madrun": "^13.0.0",
     "putout": "^42.0.5",
