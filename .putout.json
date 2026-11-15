@@ -1,0 +1,5 @@
+{
+    "rules": {
+        "logical-expressions/convert-coalescing-to-logical": "off"
+    }
+}

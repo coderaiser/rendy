@@ -117,3 +117,40 @@ test('rendy: modifiers: not used: curry', (t) => {
     t.equal(result, expected);
     t.end();
 });
+
+test('rendy: value containing placeholder is not re-scanned', (t) => {
+    const result = rendy('hello {{ name }}', {
+        name: 'a {{b}} c',
+    });
+    
+    t.equal(result, 'hello a {{b}} c');
+    t.end();
+});
+
+test('rendy: value referencing another key is inserted verbatim', (t) => {
+    const result = rendy('{{ a }} / {{ b }}', {
+        a: '{{ b }}',
+        b: 'secret',
+    });
+    
+    t.equal(result, '{{ b }} / secret');
+    t.end();
+});
+
+test('rendy: 0 with modifiers', (t) => {
+    const result = rendy('n={{ n }}', {
+        n: 0,
+    }, {});
+    
+    t.equal(result, 'n=0');
+    t.end();
+});
+
+test('rendy: 0 without modifiers', (t) => {
+    const result = rendy('n={{ n }}', {
+        n: 0,
+    });
+    
+    t.equal(result, 'n=0');
+    t.end();
+});
