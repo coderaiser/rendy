@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/coderaiser/rendy",
   "devDependencies": {
-    "check-dts": "^1.0.0",
+    "check-dts": "^2.0.1",
     "currify": "^4.0.0",
     "eslint": "^10.0.0",
     "eslint-plugin-n": "^17.24.0",
