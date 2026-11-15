@@ -1,3 +1,14 @@
+2026.11.15, v5.0.3
+
+fix:
+- b026bd3 rendy: values containing {{ }} are re-scanned as placeholders
+
+feature:
+- aadb547 rendy: simplify
+- 5a8456e rendy: supertape v13.6.2
+- 12cdc5c rendy: eslint-plugin-n v18.5.0
+- 41b3c2b rendy: check-dts v2.0.1
+
 2026.03.29, v5.0.2
 
 fix:
